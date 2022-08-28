@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, inital-scale-1.0" />
+    <title>Loan Application</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="loanapplication.js"></script>
+  </head>
+  <body onload="myFunction()">
+    <div class="container">
+      <div class="header">
+        <h2>Loan Application</h2>
+      </div>
+      <form class="form" id="form">
+        <div class="form-control" id="FullNameContainer">
+          <label>FullName:</label>
+          <input
+            type="text"
+            name=""
+            id="FullName"
+            placeholder="Enter your FullName"
+            onfocusout="onFocusOutValidation('FullName')"
+          />
+          <i class="fa-solid fa-circle-check"></i>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <small id="FullNameError"> min two words each with min 4 chars</small>
+        </div>
+        <div class="form-control" id="EmailContainer">
+          <label>Email:</label>
+          <input
+            type="Email"
+            name=""
+            id="Email"
+            placeholder="Enter your Email"
+            onfocusout="onFocusOutValidation('Email')"
+          />
+          <i class="fa-solid fa-circle-check"></i>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <small id="EmailError">Please Enter Valid E-mail</small>
+        </div>
+        <div class="form-control" id="PANContainer">
+          <label>PAN:</label>
+          <input
+            type="PAN"
+            name=""
+            id="PAN"
+            placeholder="Enter your PANCARD ID"
+            onfocusout="onFocusOutValidation('PAN')"
+          />
+          <i class="fa-solid fa-circle-check"></i>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <small id="PANError">Please Enter Valid Pan</small>
+        </div>
+        <div class="form-control" id="Loan_AmountContainer">
+          <label>Loan Amount:</label>
+          <input
+            type="number"
+            name=""
+            id="Loan_Amount"
+            placeholder="Enter your Loan_Amount"
+            onfocusout="onFocusOutValidation('Loan_Amount')"
+          />
+          <i class="fa-solid fa-circle-check"></i>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <small id="Loan_AmountError"
+            >Loan Amount should be under 999999999</small
+          >
+        </div>
+        <div id="captchaBackground">
+          <div id="user-input" class="inline">
+            <input type="text" id="input" placeholder="Captcha code" />
+          </div>
+
+          <div class="inline" onclick="generate()">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </div>
+          <div id="image" class="inline" selectable="False"></div>
+          <input type="submit" class="wes" id="btn"/>
+          <p id="key"></p>
+        </div>
+        <small id="mainValidationError">please enter required values</small>
+        <input
+          type="submit"
+          value="submit"
+          class="button"
+          name=""
+          id="mainSubmit"
+          onclick="mainSubmitFunction()"
+        />
+      </form>
+    </div>
+  </body>
+</html>

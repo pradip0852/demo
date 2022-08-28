@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, inital-scale-1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="style.css" />
+    <script src="thanks.js"></script>
+  </head>
+  <body onload="myFunction()">
+    <div class="thankscontainer">
+    <h1>HELLO</h1>
+    <p>
+      <span id="userName">user Name</span>,<br>
+      Thank you for your inquiry. A 4 digit verification number has been sent to your email,<br>
+        please enter it in the following box and submit for confirmation:   
+    </p><br><br>
+    <div class="form-control" id="FullNameContainer">
+      <label id="label">Please enter OTP</label>
+      <input type="number" name="" id="otpInput" placeholder="Enter OTP" />
+      <i class="fa-solid fa-circle-check"></i>
+      <i class="fa-solid fa-circle-exclamation"></i>
+      <!-- <small id="FullNameError">Error Msg</small> -->
+    </div>
+    <input
+      type="submit"
+      value="submit"
+      class="button"
+      name=""
+      id="mainSubmit"
+      onclick="otpSubmitFunction()"
+    />
+    <span id="otpError"></span>
+    </div>
+  </body>
+</html>
